@@ -20,10 +20,13 @@ class LandRoverCommandHandler
 
     public function handle(LandRoverCommand $command)
     {
+        $location = $command->getLocation();
+        $coordinates = $location->getCoordinates();
+        $orientation = $location->getOrientation();
         $roverLanded = $this->eventFactory->create(Events::ROVER_LANDED, [
-            'x' => $command->getCoordinates()->getX(),
-            'y' => $command->getCoordinates()->getY(),
-            'orientation' => $command->getOrientation()->get(),
+            'x' => $coordinates->getX(),
+            'y' => $coordinates->getY(),
+            'orientation' => $orientation->get(),
         ]);
         $this->eventStore->log($roverLanded);
     }
