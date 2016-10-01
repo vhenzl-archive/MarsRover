@@ -3,13 +3,13 @@
 namespace spec\MarsRover\Navigation;
 
 use MarsRover\Navigation\DriveRoverCommand;
+use MarsRover\Navigation\Instruction;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class DriveRoverCommandSpec extends ObjectBehavior
 {
-    const DRIVING_INSTRUCTION = 'move_forward';
-    const INVALID_DRIVING_INSTRUCTION = 'wake_up_polly_parrot';
+    const DRIVING_INSTRUCTION = Instruction::MOVE_FORWARD;
 
     function it_has_a_driving_instruction()
     {
@@ -17,17 +17,6 @@ class DriveRoverCommandSpec extends ObjectBehavior
             self::DRIVING_INSTRUCTION
         );
 
-        $this->getInstruction()->shouldBe(self::DRIVING_INSTRUCTION);
-    }
-
-    function it_cannot_have_invalid_instruction()
-    {
-        $this->beConstructedWith(
-            self::INVALID_DRIVING_INSTRUCTION
-        );
-
-        $this->shouldThrow(
-            \InvalidArgumentException::class
-        )->duringInstantiation();
+        $this->getInstruction()->get()->shouldBe(self::DRIVING_INSTRUCTION);
     }
 }
