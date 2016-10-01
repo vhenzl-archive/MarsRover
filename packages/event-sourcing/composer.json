@@ -1,0 +1,15 @@
+{
+	"name": "mars-rover/event-sourcing",
+	"license": "MIT",
+	"type": "library",
+	"description": "Mars Rover - Event Sourcing",
+	"autoload": {
+		"psr-4": { "MarsRover\\EventSourcing\\": "src/MarsRover/EventSourcing" }
+	},
+	"require": {
+		"php": "^7.0"
+	},
+	"require-dev": {
+		"memio/spec-gen": "^0.6"
+	}
+}

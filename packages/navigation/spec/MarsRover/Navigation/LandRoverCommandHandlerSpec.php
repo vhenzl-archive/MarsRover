@@ -2,10 +2,10 @@
 
 namespace spec\MarsRover\Navigation;
 
-use MarsRover\Navigation\EventFactory;
-use MarsRover\Navigation\Event;
+use MarsRover\EventSourcing\EventFactory;
+use MarsRover\EventSourcing\Event;
+use MarsRover\EventSourcing\EventStore;
 use MarsRover\Navigation\Events;
-use MarsRover\Navigation\EventStore;
 use MarsRover\Navigation\LandRoverCommand;
 use MarsRover\Navigation\LandRoverCommandHandler;
 use MarsRover\Navigation\Orientation;
