@@ -4,9 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a384d64bc762c560bfc8282ef9d48669",
-    "content-hash": "590eba4c81c7f3fe4564b1740b590857",
+    "hash": "333fc17385eba9427100463dd521c3e8",
+    "content-hash": "8924b7ff521c51c792d92f9f75076b2a",
     "packages": [
+        {
+            "name": "beberlei/composer-monorepo-plugin",
+            "version": "v0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/composer-monorepo-plugin.git",
+                "reference": "0065e815b071a52cfed668490d610b9ba989c0c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/composer-monorepo-plugin/zipball/0065e815b071a52cfed668490d610b9ba989c0c9",
+                "reference": "0065e815b071a52cfed668490d610b9ba989c0c9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1",
+                "phake/phake": "^2.2",
+                "phpunit/phpunit": "5.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Monorepo\\Composer\\Plugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Monorepo\\": "src/main"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2016-05-28 10:54:12"
+        },
         {
             "name": "mars-rover/event-sourcing",
             "version": "dev-5-location",
