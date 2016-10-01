@@ -1,0 +1,8 @@
+{
+  "deps-dev": [
+    "vendor/memio/spec-gen"
+  ],
+	"autoload": {
+		"psr-4": { "MarsRover\\EventSourcing\\": "src/MarsRover/EventSourcing" }
+	}
+}

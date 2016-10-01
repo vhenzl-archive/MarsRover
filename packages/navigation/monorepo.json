@@ -1,0 +1,11 @@
+{
+  "deps": [
+    "packages\\event-sourcing"
+  ],
+  "deps-dev": [
+    "vendor/memio/spec-gen"
+  ],
+	"autoload": {
+		"psr-4": { "MarsRover\\Navigation\\": "src/MarsRover/Navigation" }
+	}
+}
