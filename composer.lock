@@ -4,9 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4dc60aa8c831612214aa9ea39692fbb9",
-    "content-hash": "1b38a33fffbda9ee558497f78a3642b4",
+    "hash": "a384d64bc762c560bfc8282ef9d48669",
+    "content-hash": "590eba4c81c7f3fe4564b1740b590857",
     "packages": [
+        {
+            "name": "mars-rover/event-sourcing",
+            "version": "dev-5-location",
+            "dist": {
+                "type": "path",
+                "url": "./packages/event-sourcing",
+                "reference": "a65fd140b9ae5aa5be60d014a0d90b0e49a95a53",
+                "shasum": null
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "memio/spec-gen": "^0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MarsRover\\EventSourcing\\": "src/MarsRover/EventSourcing"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Mars Rover - Event Sourcing"
+        },
+        {
+            "name": "mars-rover/location",
+            "version": "dev-5-location",
+            "dist": {
+                "type": "path",
+                "url": "./packages/location",
+                "reference": "f707c75c6c77b211bbd4717acd90b32b8e7d0350",
+                "shasum": null
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "memio/spec-gen": "^0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MarsRover\\Location\\": "src/MarsRover/Location"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Mars Rover - Location"
+        },
         {
             "name": "mars-rover/navigation",
             "version": "dev-1-navigation",
@@ -1033,6 +1085,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mars-rover/event-sourcing": 20,
+        "mars-rover/location": 20,
         "mars-rover/navigation": 20
     },
     "prefer-stable": false,
