@@ -4,21 +4,13 @@ namespace MarsRover\Navigation;
 
 class LandRoverCommand
 {
-    const VALID_ORIENTATIONS = ['north', 'east', 'west', 'south'];
-
     private $coordinates;
     private $orientation;
 
     public function __construct($x, $y, $orientation)
     {
         $this->coordinates = new Coordinates($x, $y);
-        if (false === in_array($orientation, self::VALID_ORIENTATIONS, true)) {
-            throw new \InvalidArgumentException(
-                'Orientation must be one of: '
-                .implode(', ', self::VALID_ORIENTATIONS)
-            );
-        }
-        $this->orientation = $orientation;
+        $this->orientation = new Orientation($orientation);
     }
 
     public function getCoordinates() : Coordinates
@@ -26,7 +18,7 @@ class LandRoverCommand
         return $this->coordinates;
     }
 
-    public function getOrientation() : string
+    public function getOrientation() : Orientation
     {
         return $this->orientation;
     }
