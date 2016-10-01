@@ -2,8 +2,10 @@
 
 namespace MarsRover\EventSourcing;
 
-interface EventFactory
+class EventFactory
 {
-
-    public function create($argument1, $argument2);
+    public function create(string $name, array $data) : Event
+    {
+        return new Event($name, $data, new \DateTime());
+    }
 }
