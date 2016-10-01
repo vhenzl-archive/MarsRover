@@ -2,6 +2,9 @@
 
 namespace MarsRover\Navigation;
 
+use MarsRover\EventSourcing\EventFactory;
+use MarsRover\EventSourcing\EventStore;
+
 class LandRoverCommandHandler
 {
     private $eventFactory;
