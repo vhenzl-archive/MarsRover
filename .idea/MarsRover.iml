@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/navigation/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/event-sourcing/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/event-sourcing/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/location/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/location/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
